@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>ETD</title>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="icon" href="images/logo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/grid.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/owl.carousel.css"/>
+    <script>
+        var ids = localStorage.getItem('Elegido2');
+        if(ids){
+            console.log('Ha sido guardada la elección 1 y 2.');
+            localStorage.setItem("IDT", "ct2");
+        }else{
+            console.log('Ha sido guardada la elección 1.');
+            localStorage.setItem("IDT", "ct1");
+        }
+        var IDS = localStorage('IDT')
+    </script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.2.1.js"></script>
+    <script src="js/jquery.equalheights.js"></script>
+    <!--[if (gt IE 9)|!(IE)]><!-->
+    <script src="js/jquery.mobile.customized.min.js"></script>
+    <!--<![endif]-->
+    <script src="js/camera.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <!--[if lt IE 9]>
+        <div style=' clear: both; text-align:center; position: relative;'>
+        <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+            <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0"
+                 height="42" width="820"
+                 alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/>
+        </a>
+    </div>
+    <script src="js/html5shiv.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+    <![endif]-->
+
+    <!-- Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+
+</head>
+<body>
+<div class="page">
+<!--========================================================
+                          HEADER
+=========================================================-->
+<header id="header">
+    <div id="stuck_container">
+        <div class="container">
+            <div class="row">
+                <div class="grid_12">
+                    <div class="brand put-left">
+                        <h1>
+                            <a href="menu.html">
+                                <img src="images/logo2.png" alt="Logo" class="user-img img" width="80" height="92"/>
+                            </a>
+                        </h1>
+                    </div>
+                    <nav class="nav put-right">
+                        <ul class="sf-menu">
+                            <li><a href="index.html">Home</a></li>
+                           <li class="current"><a href="etd.html">ETD</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--========================================================
+                          CONTENT
+=========================================================-->
+
+<div class="bg_1 wrap_2 wrap_4">
+    <div class="container">
+        <div class="row">
+            <div class="preffix_2 grid_8">
+                <h2 class="header_1 wrap_3 color_3">
+                    Evaluación de Toma de Desiciones
+                </h2>
+            </div>
+        </div>
+        <p class="text_3">
+            Responda el siguiente cuestionario.
+        </p>
+        <br>
+
+        <div class="row">
+            <div class="grid_12">
+                <div class="box_1">
+                    <form name="test" id="formulario1" action="/experimento/etd" method="post">
+                            <input type="hidden" name="ids" value=ct2>
+                            <p class="text_3">
+                                    <div id="tabla">
+                                        <div class="Block2"></div>
+                                        <div class="Block">Totalmente en desacuerdo</div>
+                                        <div class="Block">En desacuerdo</div>
+                                        <div class="Block">De acuerdo</div>
+                                        <div class="Block">Totalmente de acuerdo</div>
+                                    </div>
+                                    <div class="marco">
+                                        <p class="labelc">1. La elección que acabo de realizar me hace sentir satisfecho.</p>
+                                    <div id="Contenedor_1" name="Contenedor_1" class="pay contenedor">
+
+                                        <div id="div_1" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r1" name="n1" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r2" name="n1" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r3" name="n1" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r4" name="n1" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    <div class="marco">
+                                        <p class="labelc">2. Una persona promedio se sentiría cómoda con el número de alternativas presentadas.</p>
+                                    <div id="Contenedor_2" name="Contenedor_2" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r5" name="n2" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r6" name="n2" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r7" name="n2" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r8" name="n2" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    <div class="marco">
+                                        <p class="labelc">3. Las opciones presentadas me influenciaron a tomar una decisión que yo no tomaría.
+                                        </p>
+                                    <div id="Contenedor_3" name="Contenedor_3" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r9" name="n3" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r10" name="n3" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r11" name="n3" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r12" name="n3" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    <div class="marco">
+                                        <p class="labelc">4. Elegir esta opción me produce una sensación agradable.
+                                        </p>
+                                    <div id="Contenedor_4" name="Contenedor_3" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r13" name="n4" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r14" name="n4" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r15" name="n4" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r16" name="n4" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    <div class="marco">
+                                        <p class="labelc">5. El producto elegido cumple con mis estándares.</p>
+                                    <div id="Contenedor_5" name="Contenedor_3" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r17" name="n5" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r18" name="n5" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r19" name="n5" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r20" name="n5" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    <div class="marco">
+                                        <p class="labelc">6. En esta decisión, mi apetito no me influenció.
+                                        </p>
+                                    <div id="Contenedor_6" name="Contenedor_3" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r21" name="n6" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r22" name="n6" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r23" name="n6" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r24" name="n6" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    <div class="marco">
+                                        <p class="labelc">7. Relaciono este producto con recuerdos agradables para mí.
+                                        </p>
+                                    <div id="Contenedor_7" name="Contenedor_3" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r25" name="n7" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r26" name="n7" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r27" name="n7" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r28" name="n7" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    <div class="marco">
+                                        <p class="labelc">8. Tengo más de un motivo para seleccionar esta opción.
+                                        </p>
+                                    <div id="Contenedor_8" name="Contenedor_3" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r29" name="n8" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r30" name="n8" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r31" name="n8" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r32" name="n8" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    <div class="marco">
+                                        <p class="labelc">9. Me invadió un alto sentido de indecisión.
+                                        </p>
+                                    <div id="Contenedor_9" name="Contenedor_3" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r33" name="n9" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r34" name="n9" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r35" name="n9" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r36" name="n9" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    <div class="marco">
+                                        <p class="labelc">10. Consumir el producto en este momento, me haría sentir más feliz.</p>
+                                    <div id="Contenedor_10" name="Contenedor_3" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r37" name="n10" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r38" name="n10" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r39" name="n10" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r40" name="n10" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    <div class="marco">
+                                        <p class="labelc">11. Realicé la elección sin la influencia de impulsos.
+                                        </p>
+                                    <div id="Contenedor_11" name="Contenedor_3" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r41" name="n11" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r42" name="n11" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r43" name="n11" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r44" name="n11" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    <div class="marco">
+                                        <p class="labelc">12. Tomar esta decisión fue sencillo.
+                                        </p>
+                                    <div id="Contenedor_12" name="Contenedor_3" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r45" name="n12" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r46" name="n12" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r47" name="n12" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r48" name="n12" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    <div class="marco">
+                                        <p class="labelc">13.	En mi infancia solía disfrutar de este producto.
+                                        </p>
+                                    <div id="Contenedor_13" name="Contenedor_3" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r49" name="n13" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r50" name="n13" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r51" name="n13" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r52" name="n13" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+                                    <div class="marco">
+                                        <p class="labelc">14.	Planeo consumir este producto en un futuro cercano.</p>
+                                    <div id="Contenedor_14" name="Contenedor_3" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r53" name="n14" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r54" name="n14" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r55" name="n14" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r56" name="n14" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+                                    <div class="marco">
+                                        <p class="labelc">15.	Tratar de hallar una nueva elección preferida esta fuera de mis planes.</p>
+                                    <div id="Contenedor_15" name="Contenedor_3" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r57" name="n15" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r58" name="n15" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r59" name="n15" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r60" name="n15" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+                                    <input type="hidden" id="ide" name="ide" value="<%=eleccion[0].IdEleccion %>">
+                                    <input type="submit" id="btnGuardar" class="botones" value="Guardar">
+                    </form>
+                </div>
+                <br>
+            </div>
+            <p></p>
+            <br>
+        </div>
+    </div>
+
+</div>
+</div>
+
+</section>
+</div>
+<!--========================================================
+                          FOOTER
+=========================================================-->
+<footer id="footer" class="color_9">
+    <div class="container">
+        <div class="row">
+            <div class="grid_12">
+                <p class="info text_4 color_4">
+                    © <span id="copyright-year"></span> | MSC Tec Misantla
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/new.js"></script>
+<script>
+    var ls = localStorage.getItem("Elegido1");
+</script>
+<!-- <script src="js/app.js"></script>
+<script src="js/script.js"></script>
+<script src="js/almacenar.js"></script>
+<script src="js/run.js"></script> -->
+</body>
+</html>

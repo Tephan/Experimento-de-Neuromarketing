@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Datos del participante</title>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="icon" href="images/logo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/grid.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/owl.carousel.css"/>
+    <script>localStorage.setItem("ID", "cd");</script>
+    <!--<script src="js/jquery.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="js/jquery-migrate-1.2.1.js"></script>
+    <script src="js/jquery.equalheights.js"></script>
+    <!--[if (gt IE 9)|!(IE)]><!-->
+    <script src="js/jquery.mobile.customized.min.js"></script>
+    <!--<![endif]-->
+    <script src="js/camera.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <!--[if lt IE 9]>
+        <div style=' clear: both; text-align:center; position: relative;'>
+        <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+            <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0"
+                 height="42" width="820"
+                 alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/>
+        </a>
+    </div>
+    <script src="js/html5shiv.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+    <![endif]-->
+
+    <!-- Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+
+</head>
+<body>
+<div class="page">
+<!--========================================================
+                          HEADER
+=========================================================-->
+<header id="header">
+    <div id="stuck_container">
+        <div class="container">
+            <div class="row">
+                <div class="grid_12">
+                    <div class="brand put-left">
+                        <h1>
+                            <a href="menu.html">
+                                <img src="images/logo2.png" alt="Logo" class="user-img img" width="80" height="92"/>
+                            </a>
+                        </h1>
+                    </div>
+                    <nav class="nav put-right">
+                        <ul class="sf-menu">
+                            <li><a href="index.html">Home</a></li>
+                           <li class="current"><a href="datos.html">Datos</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--========================================================
+                          CONTENT
+=========================================================-->
+
+<div class="bg_1 wrap_2 wrap_4">
+    <div class="container">
+        <div class="row">
+            <div class="preffix_2 grid_8">
+                <h2 class="header_1 wrap_3 color_3">
+                    Datos del partcipante
+                </h2>
+            </div>
+        </div>
+        <div><p>Llena el siguiente formulario.</p></div>
+        <div class="row">
+            <div class="grid_12">
+                <div class="box_1">
+                    <div name="contenido1" id="formulario1">
+                        <form name="test" action="/experimento/datos" method="post">
+                            <p class="text_3">
+                                <p class="labeln">1. Sexo <br>
+                                    <select id="r1" name="n1" class="sel" required>
+                                        <option value="">Seleccione una opción</option>
+                                        <option value="Femenino">Femenino</option>
+                                        <option value="Masculino">Masculino</option>
+                                    </select>
+                                </p>
+                            </p>
+                            <p class="text_3">
+                                <p class="labeln">2. Edad <br>
+                                    <select id="r2" name="n2" class="sel" required>
+                                        <option value="">Seleccione una opción</option>
+                                        <option value="10-13">De 10 a 13 años</option>
+                                        <option value="14-17">De 14 a 17 años</option>
+                                        <option value="18-21">De 18 a 21 años</option>
+                                        <option value="22-25">De 22 a 25 años</option>
+                                        <option value="26-29">De 26 a 29 años</option>
+                                        <option value="30-33">De 30 a 33 años</option>
+                                        <option value="34-37">De 34 a 37 años</option>
+                                        <option value="38-41">De 38 a 41 años</option>
+                                    </select>
+                                </p>
+                            </p>
+                            <p class="text_3">
+                                <p class="labeln">3. Escolaridad <br>
+                                    <select id="r3" name="n3" class="sel" required>
+                                        <option value="">Seleccione una opción</option>
+                                        <option value="Primaria">Primaria</option>
+                                        <option value="Secundaria">Secundaria</option>
+                                        <option value="Preparatoria">Preparatoria</option>
+                                        <option value="Licenciatura">Licenciatura</option>
+                                        <option value="Posgrado">Posgrado</option>
+                                    </select>
+                                </p>
+                            </p>
+                            <p class="text_3">
+                                <p class="labeln">4. Ocupación <br>
+                                    <select id="r4" name="n4" class="sel" required>
+                                        <option value="">Seleccione una opción</option>
+                                        <option value="Comerciante">Comerciante</option>
+                                        <option value="Contratista">Contratista</option>
+                                        <option value="Empleado">Empleado</option>
+                                        <option value="Estudiante">Estudiante</option>
+                                        <option value="Ama de casa">Ama de casa</option>
+                                    </select>
+                                </p>
+                            </p>
+                            <p class="text_3">
+                                <p class="labeln">5. ¿Hace cuantas horas comiste? <br>
+                                    <select id="r5" name="n5" class="sel" required>
+                                        <option value="">Seleccione una opción</option>
+                                        <option value="1-2">De 1 a 2 horas</option>
+                                        <option value="3-4">De 3 a 4 horas</option>
+                                        <option value="5-6">De 5 a 6 horas</option>
+                                        <option value="7-8">De 7 a 8 horas</option>
+                                        <option value="Mas de 8">Más de 8 horas</option>
+                                    </select>
+                                </p>
+                            </p>
+                            <p class="text_3">
+                                <p class="labeln">6. ¿Hace cuantas horas te despertaste? <br>
+                                    <select id="r6" name="n6" class="sel" required>
+                                        <option value="">Seleccione una opción</option>
+                                        <option value="1-2">De 1 a 2 horas</option>
+                                        <option value="3-4">De 3 a 4 horas</option>
+                                        <option value="5-6">De 5 a 6 horas</option>
+                                        <option value="7-8">De 7 a 8 horas</option>
+                                        <option value="Mas de 8">Más de 8 horas</option>
+                                    </select>
+                                </p>
+                            </p>
+                            <p class="text_3">
+                                <p class="labeln">7. ¿Cuantas comidas has realizado el dia de hoy? <br>
+                                    <select id="r7" name="n7" class="sel" required>
+                                        <option value="">Seleccione una opción</option>
+                                        <option value="0">Ninguna</option>
+                                        <option value="1">1 comida</option>
+                                        <option value="2">2 comidas</option>
+                                        <option value="3">3 comidas</option>
+                                        <option value="Mas de 3">Más de 3 comidas</option>
+                                    </select>
+                                </p>
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p><input type="submit" id="btnDatos" class="botones" value="Guardar"> </p>
+    </form>
+</div>
+</div>
+
+<!--========================================================
+                          FOOTER
+=========================================================-->
+<footer id="footer" class="color_9">
+    <div class="container">
+        <div class="row">
+            <div class="grid_12">
+                <p class="info text_4 color_4">
+                    © <span id="copyright-year"></span> | MSC Tec Misantla
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/new.js"></script>
+<!-- <script src="js/app.js"></script>
+<script src="js/almacenar.js"></script>
+<script src="js/run.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mi página de ejemplo</title>
+		<script src="js/jquery.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script>localStorage.setItem("ID", "e1");</script>
+	</head>
+	<body>
+		Aquí va el contenido
+		<form name="test">
+			<div id="div_1" class="user-panel.main img">
+				<a><img id = 'r1' name="n1"></a>
+			</div>
+	
+			<div id="div_2" class="user-panel.main img">
+				<a><img id = 'r2' name="n2"></a>
+			</div>
+	
+			<div id="div_3" class="user-panel.main img">
+				<a><img id = 'r3' name="n3"></a>
+			</div>
+	
+			<div id="div_4" class="user-panel.main img">
+				<a><img id = 'r4' name="n4"></a>
+			</div>
+	
+			<div id="div_5" class="user-panel.main img">
+				<a><img id = 'r5' name="n5"></a>
+			</div>
+	
+			<div id="div_6" class="user-panel.main img">
+				<a><img id = 'r6' name="n6"></a>
+			</div>
+	
+			<div id="div_7" class="user-panel.main img">
+				<a><img id = 'r7' name="n7"></a>
+			</div>
+	
+			<div id="div_8" class="user-panel.main img">
+				<a><img id = 'r8' name="n8"></a>
+			</div>
+		</form>
+	
+		
+		<p><input type="Button" id="btnGuardar" class="botones" value="Guardar" onclick="procesar()"> </p>
+	
+		<script src="js/aleatorio.js" defer></script>
+		<script>		
+			
+			function multipleEventsListeners(elem, events, func) {
+				var event = events.split(' ');
+				for (var i = 0; i < event.length; i++) {
+					elem.addEventListener(event[i], func, false);
+				}
+			}
+			function selectImg(){
+				for (let i = 1; i <= 8; i++) {
+				e=document.getElementById('r'+i)
+				multipleEventsListeners(e,'click', function(e){console.log(this.src)})	
+				}
+			}
+			selectImg()
+
+		</script>
+	</body>
+</html>

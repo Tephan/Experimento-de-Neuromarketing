@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>EMAX</title>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="icon" href="images/logo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/grid.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/owl.carousel.css"/>
+    <script>localStorage.setItem("ID", "em");</script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.2.1.js"></script>
+    <script src="js/jquery.equalheights.js"></script>
+    <!--[if (gt IE 9)|!(IE)]><!-->
+    <script src="js/jquery.mobile.customized.min.js"></script>
+    <!--<![endif]-->
+    <script src="js/camera.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <!--[if lt IE 9]>
+        <div style=' clear: both; text-align:center; position: relative;'>
+        <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+            <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0"
+                 height="42" width="820"
+                 alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/>
+        </a>
+    </div>
+    <script src="js/html5shiv.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+    <![endif]-->
+
+    <!-- Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+
+</head>
+<body>
+<div class="page">
+<!--========================================================
+                          HEADER
+=========================================================-->
+<header id="header">
+    <div id="stuck_container">
+        <div class="container">
+            <div class="row">
+                <div class="grid_12">
+                    <div class="brand put-left">
+                        <h1>
+                            <a href="menu.html">
+                                <img src="images/logo2.png" alt="Logo" class="user-img img" width="80" height="92"/>
+                            </a>
+                        </h1>
+                    </div>
+                    <nav class="nav put-right">
+                        <ul class="sf-menu">
+                            <li><a href="index.html">Home</a></li>
+                           <li class="current"><a href="cmax.html">EMAX</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--========================================================
+                          CONTENT
+=========================================================-->
+
+<div class="bg_1 wrap_2 wrap_4">
+    <div class="container">
+        <div class="row">
+            <div class="preffix_2 grid_8">
+                <h2 class="header_1 wrap_3 color_3">
+                    Escala de Maximización
+                </h2>
+            </div>
+        </div>
+        <p class="text_3">
+            Responda el siguiente cuestionario.
+        </p>
+        <br>
+
+        <div class="row">
+            <div class="grid_12">
+                <div class="box_1">
+                    <form name="test" id="formulario1" action="/experimento/emax" method="post">
+                            <p class="text_3">
+                                    <div id="tabla">
+                                        <div class="Block2"></div>
+                                        <div class="Block">Totalmente en desacuerdo</div>
+                                        <div class="Block">En desacuerdo</div>
+                                        <div class="Block">De acuerdo</div>
+                                        <div class="Block">Totalmente de acuerdo</div>
+                                    </div>
+
+                                    <div class="marco">
+                                        <p class="labelc">1. Cada vez que me enfrento a una elección, trato de imaginar cuáles son todas las demás posibilidades, incluso las que no están presentes en este momento.</p>
+                                    <div id="Contenedor_1" name="Contenedor_1" class="pay contenedor">
+
+                                        <div id="div_1" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r1" name="n1" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r2" name="n1" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r3" name="n1" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r4" name="n1" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    <div class="marco">
+                                        <p class="labelc">2. No importa cuán satisfecho esté con mi trabajo, lo correcto es que esté atento a mejores oportunidades.</p>
+                                    <div id="Contenedor_2" name="Contenedor_2" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r5" name="n2" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r6" name="n2" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r7" name="n2" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r8" name="n2" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    <div class="marco">
+                                        <p class="labelc">3. Cuando estoy en el automóvil escuchando la radio, a menudo reviso otras estaciones para ver si suena algo mejor, incluso si estoy relativamente satisfecho con lo que estoy escuchando.</p>
+                                    <div id="Contenedor_3" name="Contenedor_3" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r9" name="n3" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r10" name="n3" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r11" name="n3" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r12" name="n3" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    <div class="marco">
+                                        <p class="labelc">4. Cuando veo televisión, navego por los canales, a menudo explorando las opciones disponibles incluso mientras intento ver un programa.</p>
+                                    <div id="Contenedor_4" name="Contenedor_3" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r13" name="n4" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r14" name="n4" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r15" name="n4" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r16" name="n4" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    <div class="marco">
+                                        <p class="labelc">5. Trato las relaciones como ropa: espero probarme muchas cosas antes de encontrar la que me queda perfecta.</p>
+                                    <div id="Contenedor_5" name="Contenedor_3" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r17" name="n5" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r18" name="n5" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r19" name="n5" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r20" name="n5" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    <div class="marco">
+                                        <p class="labelc">6. A menudo me resulta difícil comprar un regalo para un amigo.
+                                        </p>
+                                    <div id="Contenedor_6" name="Contenedor_3" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r21" name="n6" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r22" name="n6" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r23" name="n6" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r24" name="n6" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    <div class="marco">
+                                        <p class="labelc">7. Alquilar videos es realmente difícil. Siempre estoy luchando para elegir el mejor.
+                                        </p>
+                                    <div id="Contenedor_7" name="Contenedor_3" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r25" name="n7" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r26" name="n7" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r27" name="n7" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r28" name="n7" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    <div class="marco">
+                                        <p class="labelc">8. Cuando voy de compras, me cuesta mucho encontrar ropa que me encante.
+                                        </p>
+                                    <div id="Contenedor_8" name="Contenedor_3" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r29" name="n8" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r30" name="n8" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r31" name="n8" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r32" name="n8" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    <div class="marco">
+                                        <p class="labelc">9. Soy muy fan de las listas que intentan jerarquizar cosas (las mejores películas, los mejores cantantes, los mejores deportistas, las mejores novelas, etc.).
+                                        </p>
+                                    <div id="Contenedor_9" name="Contenedor_3" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r33" name="n9" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r34" name="n9" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r35" name="n9" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r36" name="n9" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    <div class="marco">
+                                        <p class="labelc">10. Encuentro que escribir es muy difícil, incluso si solo es escribir una carta a un amigo, porque es muy difícil expresar las cosas correctamente. A menudo hago varios borradores incluso de cosas simples.</p>
+                                    <div id="Contenedor_10" name="Contenedor_3" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r37" name="n10" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r38" name="n10" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r39" name="n10" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r40" name="n10" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    <div class="marco">
+                                        <p class="labelc">11. No importa lo que haga, tengo los estándares más altos para mí.</p>
+                                    <div id="Contenedor_11" name="Contenedor_3" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r41" name="n11" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r42" name="n11" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r43" name="n11" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r44" name="n11" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    <div class="marco">
+                                        <p class="labelc">12. Nunca me conformo con el segundo mejor.
+                                        </p>
+                                    <div id="Contenedor_12" name="Contenedor_3" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r45" name="n12" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r46" name="n12" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r47" name="n12" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r48" name="n12" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+
+                                    <div class="marco">
+                                        <p class="labelc">13. A menudo fantaseo con vivir de formas muy diferentes a mi vida real.
+                                        </p>
+                                    <div id="Contenedor_13" name="Contenedor_3" class="pay contenedor">
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_1"> <input id="r49" name="n13" type="radio" value="1" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_2" class="floatBlock3">
+                                            <label for="radio_2"> <input id="r50" name="n13" type="radio" value="2" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_3" class="floatBlock3">
+                                            <label for="radio_3"> <input id="r51" name="n13" type="radio" value="3" class="rad" required /></label>
+                                        </div>
+
+                                        <div id="div_4" class="floatBlock3">
+                                            <label for="radio_4"> <input id="r52" name="n13" type="radio" value="4" class="rad" required /></label>
+                                        </div>
+
+                                    </div>
+                                    </div>
+                                    <input type="hidden" id="idp" name="idp" value="<%=participante[0].IdParticipante %>">
+                                    <input type="submit" id="btnGuardar" class="botones" value="Guardar">
+                    </form>
+                </div>
+                <br>
+            </div>
+            <p></p>
+            <br>
+        </div>
+    </div>
+</div>
+</div>
+
+</section>
+</div>
+<!--========================================================
+                          FOOTER
+=========================================================-->
+<footer id="footer" class="color_9">
+    <div class="container">
+        <div class="row">
+            <div class="grid_12">
+                <p class="info text_4 color_4">
+                    © <span id="copyright-year"></span> | MSC Tec Misantla
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/new.js"></script>
+<!-- <script src="js/app.js"></script>
+<script src="js/script.js"></script>
+<script src="js/almacenar.js"></script>
+<script src="js/run.js"></script> -->
+</body>
+</html>
